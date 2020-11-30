@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 @Arial Unicode MS;}{\f1\fnil\fcharset163 @Arial Unicode MS;}{\f2\fnil\fcharset238 @Arial Unicode MS;}{\f3\fswiss Times New Roman,Bold;}{\f4\fswiss Courier New;}}
+{\colortbl ;\red0\green0\blue0;}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\f0\fs40\lang9  \cf1\b LAB 2: C\'c1C KI\f1\lang1066\u7874?\f0\lang9 U \f2\'d0\f1\lang1066\u7882?\f0\lang9 NH V\f1\lang1066\u7882?\f0\lang9  V\'c0 THANH GHI C\f1\lang1066\u7900?\f0\lang9\par
+I. L\'fd thuy\f1\lang1066\u7871?\f0\lang9 t\par
+\b0 1) Gi\f1\lang1066\u7843? s\u7917? AX=0500h, BX = 1000h, SI =1500h, DI = 2000h, [DS:1000] =0100h, [DS:1500] = 0150h, [DS:2000] = 0200h, [DS:2500] = 0250h,\par
+[DS:3000] = 3000h, v\f0\lang1033\'e0 bi\f1\lang1066\u7871?n BETA l\f0\lang1033\'e0 bi\f1\lang1066\u7871?n t\u7915? n\f2\'e3m \f1\u7903? \f2\'f0\f1\u7883?a ch\u7881? \f0\lang1033\'f4 1000h. Trong c\'e1c l\f1\lang1066\u7879?nh sau \f2\'f0\f0\lang1033\'e2y, n\f1\lang1066\u7871?u h\u7907?p l\u7879?, h\f0\lang1033\'e3y cho bi\f1\lang1066\u7871?t \f2\'f0\f1\u7883?a ch\u7881? \f0\lang1033\'f4 c\f1\lang1066\u7911?a to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng\f0\lang1033  \f1\lang1066 ngu\u7891?n ho\u7863?c thanh ghi v\f0\lang1033\'e0 k\f1\lang1066\u7871?t qu\u7843? l\f2\u432?u\f0\lang1033  \f2\lang1066 trong to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng \f2\'f0\f0\lang1033\'edch. N\f1\lang1066\u7871?u l\u7879?nh\f0\lang1033  \f1\lang1066 kh\f0\lang1033\'f4ng h\f1\lang1066\u7907?p l\u7879?, gi\u7843?i th\f0\lang1033\'edch t\f1\lang1066\u7841?i sao?\par
+a) MOV DL, SI\par
+b) MOV DI, [DI]\par
+c) ADD AX, [SI]\par
+d) SUB BX, [DI]\par
+e) LEA BX, BETA[BX]\par
+f) ADD [SI], [DI]\par
+g) ADD BH, [BL]\par
+h) ADD AH, [SI]\par
+i) MOV AX, [BX+DI+BETA]\par
+\f0\lang1033 --------------------------------------------\par
+a)L\f1\lang1066\u7879?\f0\lang1033 nh g\'e1n n\f1\lang1066\u7897?\f0\lang1033 i dung SI cho DL, K\f1\lang1066\u7871?\f0\lang1033 t qu\f1\lang1066\u7843?\f0\lang1033  l\f2\u432?\f0 u to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng \f2\'f0\f0\'edch l\'e0 DL=1500h.\par
+b)L\f1\lang1066\u7879?\f0\lang1033 nh g\'e1n v\'f9ng nh\f1\lang1066\u7899?\f0\lang1033  c\'f3 \f2\'f0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  ch\f1\lang1066\u7913?\f0\lang1033 a trong DI, v\'f9ng nh\f1\lang1066\u7899?\f0\lang1033  c\'f3 \f2\'f0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7911?\f0\lang1033  ch\f1\lang1066\u7913?\f0\lang1033 a trong DI l\'e0 [DS:2000]=0200h.\par
+c)\tab C\f1\lang1066\u7897?\f0\lang1033 ng n\f1\lang1066\u7897?\f0\lang1033 i dung AX v\f1\lang1066\u7899?\f0\lang1033 i v\'f9ng nh\f1\lang1066\u7899?\f0\lang1033  c\'f3 \f2\'f0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  ch\f1\lang1066\u7913?\f0\lang1033 a trong SI l\'e0 [DS:1500],0500h+ 0150h=0650h.\par
+d)Tr\f1\lang1066\u7915?\f0\lang1033  n\f1\lang1066\u7897?\f0\lang1033 i dung BX v\f1\lang1066\u7899?\f0\lang1033 i v\'f9ng nh\f1\lang1066\u7899?\f0\lang1033  c\'f3 \f2\'f0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  ch\f1\lang1066\u7913?\f0\lang1033 a trong DI l\'e0 [DS:2000], to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng \f2\'f0\f0\'edch l\'e0: 1000h+0200h=1200h.\par
+e) L\f1\lang1066\u7879?\f0\lang1033 nh LEA c\'f3 ngh\f2\u297?\f0 a l\'e0 \f2\'f0\f1\lang1066\u7885?\f0\lang1033 c \f2\'f0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  v\'e0o thanh ghi(kh\'f4ng ph\f1\lang1066\u7843?\f0\lang1033 i bi\f1\lang1066\u7871?\f0\lang1033 n \f2\'f0\u432?\f1\lang1066\u7907?\f0\lang1033 c l\f2\u432?\f0 u tr\f1\lang1066\u7919?\f0\lang1033  t\f1\lang1066\u7841?\f0\lang1033 i \f2\'f0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  gi\f1\lang1066\u7889?\f0\lang1033 ng nh\f2\u432?\f0  MOV):BX<-0100h.\par
+f)Kh\'f4ng h\f1\lang1066\u7907?\f0\lang1033 p l\f1\lang1066\u7879?\f0\lang1033  v\'ec c\f1\lang1066\u7843?\f0\lang1033  2 \f2\'f0\f1\lang1066\u7873?\f0\lang1033 u l\'e0 v\'f9ng nh\f1\lang1066\u7899?\f0\lang1033 .\par
+g)BH<-10h\par
+h)C\f1\lang1066\u7897?\f0\lang1033 ng n\f1\lang1066\u7897?\f0\lang1033 i dung AH v\f1\lang1066\u7899?\f0\lang1033 i v\'f9ng nh\f1\lang1066\u7899?\f0\lang1033  c\'f3 \f2\'f0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  SI : AH<-0155h.\par
+i)AX<-3100h.\par
+\f1\lang1066\par
+2) Gi\u7843? s\u7917? DI = 2000h, [DS:2000] = 0200h. H\f0\lang1033\'e3y cho bi\f1\lang1066\u7871?t \f2\'f0\f1\u7883?a ch\u7881? \f0\lang1033\'f4 c\f1\lang1066\u7911?a to\f0\lang1033\'e1n\par
+h\f1\lang1066\u7841?ng ngu\u7891?n v\f0\lang1033\'e0 k\f1\lang1066\u7871?t qu\u7843? l\f2\u432?u trong to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng \f2\'f0\f0\lang1033\'edch sau khi th\f1\lang1066\u7921?c hi\u7879?n l\u7879?nh\par
+MOV DI, [DI]\par
+\f0\lang1033 --------------------------------------------------\par
+\f2\'d0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  \'f4 c\f1\lang1066\u7911?\f0\lang1033 a to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng ngu\f1\lang1066\u7891?\f0\lang1033 n l\'e0 [DI]=0200h, K\f1\lang1066\u7871?\f0\lang1033 t qu\f1\lang1066\u7843?\f0\lang1033  l\f2\u432?\f0 u trong to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng \f2\'f0\f0\'edch l\'e0 DI=0200h.\line\f1\lang1066\par
+3) Gi\u7843? s\u7917? AX = 0500h, SI = 1500h, [DS:1500]=0150h. H\f0\lang1033\'e3y cho bi\f1\lang1066\u7871?t \f2\'f0\f1\u7883?a\par
+ch\u7881? \f0\lang1033\'f4 c\f1\lang1066\u7911?a to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng ngu\u7891?n v\f0\lang1033\'e0 k\f1\lang1066\u7871?t qu\u7843? l\f2\u432?u trong to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng \f2\'f0\f0\lang1033\'edch c\f1\lang1066\u7911?a l\u7879?nh\par
+ADD AX, [SI]\par
+\f0\lang1033 -----------------------------------\par
+\f2\'f0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  c\f1\lang1066\u7911?\f0\lang1033 a \'f4 to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng ngu\f1\lang1066\u7891?\f0\lang1033 n l\'e0 [SI]=0150h\par
+K\f1\lang1066\u7871?\f0\lang1033 t qu\f1\lang1066\u7843?\f0\lang1033  l\f2\u432?\f0 u trong to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng \f2\'f0\f0\'edch l\'e0 AX=0650h.\par
+\f1\lang1066\par
+4) Gi\u7843? s\u7917? AX = 1000h, [DS:2000] = 0200h v\f0\lang1033\'e0 BETA l\'e0 bi\f1\lang1066\u7871?n t\u7915? n\u7857?m \u7903? \f2\'f0\f1\u7883?a\f0\lang1033  \f1\lang1066 ch\u7881? \f0\lang1033\'f4 1000h. H\'e3y cho bi\f1\lang1066\u7871?t \f2\'f0\f1\u7883?a ch\u7881? \f0\lang1033\'f4 c\f1\lang1066\u7911?a to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng ngu\u7891?n v\f0\lang1033\'e0 k\f1\lang1066\u7871?t qu\u7843? l\f2\u432?u\f0\lang1033  \f2\lang1066 trong to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng \f2\'f0\f0\lang1033\'edch khi th\f1\lang1066\u7921?c hi\u7879?n l\u7879?nh LEA BX, BETA[BX]\par
+\f0\lang1033 ----------------------------------\par
+\f2\'d0\f1\lang1066\u7883?\f0\lang1033 a ch\f1\lang1066\u7881?\f0\lang1033  c\f1\lang1066\u7911?\f0\lang1033 a \'f4 to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng ngu\f1\lang1066\u7891?\f0\lang1033 n l\'e0 BETA[BX]=0100h, k\f1\lang1066\u7871?\f0\lang1033 t qu\f1\lang1066\u7843?\f0\lang1033  l\f2\u432?\f0 u trong to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng l\'e0 BX=0100h\f1\lang1066\par
+5) V\u7899?i khai b\f0\lang1033\'e1o: A DB 1, 2, 3; H\'e3y cho bi\f1\lang1066\u7871?t tr\u7883? c\u7911?a to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng \f2\'f0\f0\lang1033\'edch khi th\f1\lang1066\u7921?c\f0\lang1033  \f1\lang1066 hi\u7879?n l\u7879?nh MOV AH, BYTE PTR A\f0\lang1033\par
+----------------\par
+-\f2\'d0\u432?\f0 a byte \f2\'f0\f1\lang1066\u7847?\f0\lang1033 u ti\'ean trong m\f1\lang1066\u7843?\f0\lang1033 ng A v\'e0o th\'e1nh ghi AH, AH=1.\f1\lang1066\par
+6) V\u7899?i khai b\f0\lang1033\'e1o: B DW 4, 5, 6; H\'e3y cho bi\f1\lang1066\u7871?t tr\u7883? c\u7911?a to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng \f2\'f0\f0\lang1033\'edch khi\par
+
+\pard\sa200\sl276\slmult1 th\f1\lang1066\u7921?c hi\u7879?n l\u7879?nh MOV AX, WORD PTR B\par
+\f0\lang1033 -----------------------------------------------------------\f1\lang1066\par
+\f0\lang1033 -\f2\'d0\u432?\f0 a 2 byte th\f1\lang1066\u7845?\f0\lang1033 p trong bi\f1\lang1066\u7871?\f0\lang1033 n B v\'e0o thanh ghi AX, AX DW 4,5.\par
+
+\pard\cf0\f3\fs24  \cf1\b\f0\fs40 II. B\'e0i t\f1\lang1066\u7853?\f0\lang1033 p\par
+\b0 Th\f1\lang1066\u7921?c hi\u7879?n c\f0\lang1033\'e1c b\'e0i t\f1\lang1066\u7853?p sau v\f0\lang1033\'e0 ki\f1\lang1066\u7875?m tra l\u7841?i b\u7857?ng c\f0\lang1033\'e1ch Debug ch\f2\u432?\u417?ng tr\f0\'ecnh\par
+1) Cho bi\f1\lang1066\u7871?t n\u7897?i dung c\u7911?a to\f0\lang1033\'e1n h\f1\lang1066\u7841?ng \f2\'f0\f0\lang1033\'edch v\'e0 tr\f1\lang1066\u7883? c\f0\lang1033\'e1c c\f1\lang1066\u7901? CF, SF, ZF, PF v\f0\lang1033\'e0 OF sau khi th\f1\lang1066\u7921?c hi\u7879?n c\f0\lang1033\'e1c l\f1\lang1066\u7879?n sau:\par
+\f0 a) ADD AX, BX ;V\f1\u7899?i AX = 7FFFh, BX = 1\par
+\f0\lang1033 N\f1\lang1066\u7897?\f0\lang1033 i dung to\'e1n h\f1\lang1066\u7841?\f0\lang1033 ng \f2\'f0\f0\'edch: AX=8000h.\par
+G\'eda tr\f1\lang1066\u7883?\f0\lang1033  c\'e1c c\f1\lang1066\u7901?\f0\lang1033  CF:0, SF:1, ZF:0, PF:1, OF:1\f1\lang1066\par
+b) SUB AL, BL ;V\u7899?i AL = 1, BL= FFh\par
+\f0\lang1033 AL=FF02h\f1\lang1066\par
+\f0\lang1033 G\'eda tr\f1\lang1066\u7883?\f0\lang1033  c\'e1c c\f1\lang1066\u7901?\f0\lang1033 : CF:0, SF:1, ZF:0, PF1:, OF:1\f1\lang1066\par
+c) DEC AL ;V\u7899?i AL = 0\par
+\f0\lang1033 AL=FFFFh\f1\lang1066\par
+\f0\lang1033 G\'eda tr\f1\lang1066\u7883?\f0\lang1033  c\'e1c c\f1\lang1066\u7901?\f0\lang1033 : CF:0, SF:1, ZF:1, PF:1, OF:0\f1\lang1066\par
+d) NEG AL ;V\u7899?i AL = 7Fh\par
+\f0\lang1033 AL=FF81h\f1\lang1066\par
+\f0\lang1033 G\'eda tr\f1\lang1066\u7883?\f0\lang1033  c\'e1c c\f1\lang1066\u7901?\f0\lang1033 : CF:1, SF:1, ZF:0, PF:1, OF:0\f1\lang1066\par
+e) XCHG AX, BX ;V\u7899?i AX = 1ABCh, BX = 712Ah\par
+\f0\lang1033 G\'eda tr\f1\lang1066\u7883?\f0\lang1033  c\'e1c c\f1\lang1066\u7901?\f0\lang1033 : CF:0, SF:0, ZF:0, PF:0, OF:0\f1\lang1066\par
+f) ADD AL, BL ;V\u7899?i AL = 80h, BL = FFh\par
+\f0\lang1033 AL=017Fh,\f1\lang1066\par
+\f0\lang1033 G\'eda tr\f1\lang1066\u7883?\f0\lang1033  c\'e1c c\f1\lang1066\u7901?\f0\lang1033 : CF:0, SF:0, ZF:0, PF:0, OF:0\f1\lang1066\par
+
+\pard\sa200\sl276\slmult1 g) SUB AX, BX ;V\u7899?i AX = 0, BX = 8000h\par
+\f0\lang1033 AX=8000h\f1\lang1066\par
+\f0\lang1033 G\'eda tr\f1\lang1066\u7883?\f0\lang1033  c\'e1c c\f1\lang1066\u7901?\f0\lang1033 : CF:1, SF:1, ZF:0, PF:1, OF:1\f1\lang1066\par
+
+\pard\cf0\f4\fs24  \cf1\f0\fs40 h) NEG AX ;V\f1\u7899?i AX = 1\par
+\f0\lang1033 AX=FFFFh\f1\lang1066\par
+\f0\lang1033 G\'eda tr\f1\lang1066\u7883?\f0\lang1033  c\'e1c c\f1\lang1066\u7901?\f0\lang1033 : CF:1, SF:1, ZF:0, PF:1, OF:0\f1\lang1066\par
+\f0\lang1033\par
+\lang1066 2) Cho bi\f1\u7871?t k\u7871?t qu\u7843? sau khi th\u7921?c hi\u7879?n l\u7879?nh ADD AX, BX v\f0\lang1033\'e0 tr\f1\lang1066\u7841?ng th\f0\lang1033\'e1i c\f1\lang1066\u7901?\par
+tr\f0\lang1033\'e0n (c\'f3 ho\f1\lang1066\u7863?c kh\f0\lang1033\'f4ng d\f1\lang1066\u7845?u) c\f0\lang1033\'f3 x\f1\lang1066\u7843?y ra ra kh\f0\lang1033\'f4ng v\f1\lang1066\u7899?i:\par
+\f0 a) AX = 512Ch, BX = 4185h\par
+-AX=92B1h,C\f1\u7901?\f0\lang1033  OF=1, tr\'e0n.\lang1066\par
+b) AX = FE12h, BX = 1ACBh\par
+-AX=18DDh, C\f1\u7901?\f0\lang1033  OF=0,Kh\'f4ng tr\'e0n\lang1066\par
+c) AX = E1E4h, BX = DAB3h\par
+-AX=BC97h, C\f1\u7901?\f0\lang1033  OF=1, tr\'e0n\lang1066\par
+d) AX = 7132h, BX = 7000h\par
+-AX=E132, OF=1,tr\'e0n\par
+e) AX = 6389h, BX = 1176h\par
+\tab -AX=74FF,OF=0, kh\'f4ng tr\'e0n.\par
+------------------------------------\par
+\par
+3) Cho bi\f1\u7871?t k\u7871?t qu\u7843? sau khi th\u7921?c hi\u7879?n l\u7879?nh SUB AX, BX v\f0\lang1033\'e0 tr\f1\lang1066\u7841?ng th\f0\lang1033\'e1i c\f1\lang1066\u7901?\par
+tr\f0\lang1033\'e0n (c\'f3 ho\f1\lang1066\u7863?c kh\f0\lang1033\'f4ng d\f1\lang1066\u7845?u) c\f0\lang1033\'f3 x\f1\lang1066\u7843?y ra kh\f0\lang1033\'f4ng v\f1\lang1066\u7899?i:\par
+\f0 a) AX = 2143h, BX = 1986h\par
+-AX=07BD,OF=0,kh\'f4ng tr\'e0n\par
+b) AX = 81FEh, BX = 1986h\par
+-AX=6878,OF=1,tr\'e0n\par
+c) AX = 19BCh, BX = 81FEh\par
+-AX=97BE,OF=1,tr\'e0n\par
+d) AX = 0002h, BX = FE0Fh\par
+-AX=01F3, OF=0, kh\'f4ng tr\'e0n.\par
+e)AX=1A22h,OF=1,tr\'e0n\par
+
+\pard\sa200\sl276\slmult1 - AX = 8BCDh, BX = 71ABh\cf0\lang9\par
+}
+ 
